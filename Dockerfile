@@ -4,10 +4,16 @@ FROM osrf/ros:noetic-desktop-full-focal
 #I have adapted this for use in my project, since this is what the project was based on 
 LABEL maintainer="Alexander Robins <ed19ar3@leeds.ac.uk>"
 ARG REPO_WS=/tiago_public_ws
-RUN mkdir -p $REPO_WS/src
-WORKDIR $REPO_WS
+ARG SOURCE_DIR=/source_dir
 
-ARG SOURCE_DIR
+# Create the workspace directory and set it as the working directory
+RUN mkdir -p ${REPO_WS}/src
+WORKDIR ${REPO_WS}
+
+# Create a symbolic link from the SOURCE_DIR/src to REPO_WS/src
+RUN ln -s ${SOURCE_DIR} ${REPO_WS}
+
+# Set up the volume
 VOLUME ${SOURCE_DIR}
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
