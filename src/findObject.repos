@@ -71,10 +71,6 @@ repositories:
     type: git
     url: git@github.com:ajrobins/master_pkg.git
     version: 3fe2752f0f2eb2b35fd5261c26581ca747965a25
-  moveit_task_constructor:
-    type: git
-    url: https://github.com/ros-planning/moveit_task_constructor.git
-    version: 4781ed563657cb7ecfcca857649bdf9f1c8d95b9
   moveit_tutorials:
     type: git
     url: https://github.com/ros-planning/moveit_tutorials.git
@@ -237,8 +233,8 @@ repositories:
     version: 7c6c815b357ea1597cefe8aa51deaac898dc0ce0
   tiago_navigation:
     type: git
-    url: https://github.com/pal-robotics/tiago_navigation.git
-    version: f3e862887a8233c6e7c8eb3f7797e92189630de8
+    url: git@github.com:ajrobins/tiago_navigation-fork.git
+    version: 15aba70a4b56096e363f1bbde7032628a40d78a2
   tiago_robot:
     type: git
     url: https://github.com/pal-robotics/tiago_robot.git
@@ -258,4 +254,4 @@ repositories:
   yolov7-ros:
     type: git
     url: git@github.com:ajrobins/yolov7-ros-fork.git
-    version: 2ae3b69cfda6e45e511813d28f9bbbf037c0c4b2
+    version: a1ceb35c5fc6bde609f7a9e3a348ed25d5479d87
